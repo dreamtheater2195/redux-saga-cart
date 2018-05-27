@@ -34,6 +34,7 @@
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4",
     "socket.io": "^2.0.3",
+    "toastr": "^2.1.4",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1"

@@ -11,6 +11,7 @@ export function* loadItemDetails(item) {
 
 export function* itemDetailsSaga() {
     const { items } = yield take(SET_CART_ITEMS);
+    console.log('Set cart items', items);
     yield items.map(item => fork(loadItemDetails, item));
 }
 

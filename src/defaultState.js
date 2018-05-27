@@ -1,10 +1,19 @@
 import { fromJS } from 'immutable'
+import { FETCHING, FETCHED } from './actions';
 // TODO... finalize value list
 export const defaultState = fromJS({
-    currentUser:null,
-    cartItems:null,
-    items:[],
-    itemPrices:[],
-    taxRates:[],
-    shippingTotal:0,
+    canCheckOut: false,
+    checkoutPhase: null,
+    currentUser: null,
+    customerServiceAvailability: false,
+    isCheckingOut: false,
+    cartItems: null,
+    items: [],
+    itemPrices: [],
+    taxRates: [],
+    shippingTotal: 0,
+    itemQuantityFetchStatus: FETCHING,
+    shippingCost: 0,
+    shippingFetchStatus: FETCHING,
+    taxRate: null
 });

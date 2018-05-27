@@ -1,18 +1,16 @@
 import { connect } from 'react-redux'
-import {
-    CartItemListDisplay
-} from './CartItemListDisplay';
+import { CartItemListDisplay } from './CartItemListDisplay';
 
-import {
-    cartItemsSelector
-} from './../../selectors'
+import { cartItemsSelector } from './../../selectors'
 
 const mapStateToProps = (state) => {
     const items = cartItemsSelector(state);
-    return {
+    return items ? {
         items,
-        fetched: items !== null
-    }
+        fetched: true
+    } : {
+            fetched: false
+        };
 };
 
 export const CartItemListContainer = connect(

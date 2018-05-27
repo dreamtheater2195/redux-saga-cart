@@ -1,23 +1,17 @@
 import { connect } from 'react-redux'
-import {
-    MainDisplay
-} from './MainDisplay';
+import { MainDisplay } from './MainDisplay';
 
-import {
-    
-} from './../../actions'
+import { } from './../../actions'
 
-import {
-    isCheckingOutSelector
-} from './../../selectors'
+import { isCheckingOutSelector } from './../../selectors'
 
 const mapStateToProps = (state) => {
     return {
-        isCheckingOut:isCheckingOutSelector(state)
+        isCheckingOut: isCheckingOutSelector(state)
     }
 };
 const mapDispatchToProps = (dispatch) => ({
-    
+
 });
 
 export const MainContainer = connect(
